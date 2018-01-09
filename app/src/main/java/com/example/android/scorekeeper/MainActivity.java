@@ -9,40 +9,66 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int goalsTeamA = 0;
-    int goalsTeamB = 0;
-    int cornersTeamA = 0;
-    int cornersTeamB = 0;
-    int offsidesTeamA = 0;
-    int offsidesTeamB = 0;
+    static final String GOALS_SCORE_A = "goalsTeamA";
+    static final String GOALS_SCORE_B = "goalsTeamB";
+    static final String CORNERS_SCORE_A = "cornersTeamA";
+    static final String CORNERS_SCORE_B = "cornersTeamB";
+    static final String OFFSIDES_SCORE_A = "offsidesTeamA";
+    static final String OFFSIDES_SCORE_B = "offsidesTeamB";
+    int goalsTeamA;
+    int goalsTeamB;
+    int cornersTeamA;
+    int cornersTeamB;
+    int offsidesTeamA;
+    int offsidesTeamB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            goalsTeamA = savedInstanceState.getInt(GOALS_SCORE_A);
+            goalsTeamB = savedInstanceState.getInt(GOALS_SCORE_B);
+            cornersTeamA = savedInstanceState.getInt(CORNERS_SCORE_A);
+            cornersTeamB = savedInstanceState.getInt(CORNERS_SCORE_B);
+            offsidesTeamA = savedInstanceState.getInt(OFFSIDES_SCORE_A);
+            offsidesTeamB = savedInstanceState.getInt(OFFSIDES_SCORE_B);
+        } else {
+            goalsTeamA = 0;
+            goalsTeamB = 0;
+            cornersTeamA = 0;
+            cornersTeamB = 0;
+            offsidesTeamA = 0;
+            offsidesTeamB = 0;
+        }
         setContentView(R.layout.activity_main);
         displayGoalsForTeamA(goalsTeamA);
         displayGoalsForTeamB(goalsTeamB);
+        displayCornersForTeamA(cornersTeamA);
+        displayCornersForTeamB(cornersTeamB);
+        displayOffsidesForTeamA(offsidesTeamA);
+        displayOffsidesForTeamB(offsidesTeamB);
     }
 
-    //@Override
-    //public boolean onCreateOptionsMenu(Menu menu) {
-        /* Inflate the menu; this adds items to the action bar if it is present.*/
-    //    getMenuInflater().inflate(R.menu.menu_main, menu);
-    //    return true;
-    //}
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt(GOALS_SCORE_A, goalsTeamA);
+        savedInstanceState.putInt(GOALS_SCORE_B, goalsTeamB);
+        savedInstanceState.putInt(CORNERS_SCORE_A, cornersTeamA);
+        savedInstanceState.putInt(CORNERS_SCORE_B, cornersTeamB);
+        savedInstanceState.putInt(OFFSIDES_SCORE_A, offsidesTeamA);
+        savedInstanceState.putInt(OFFSIDES_SCORE_B, offsidesTeamB);
+        super.onSaveInstanceState(savedInstanceState);
+    }
 
-    //@Override
-    //public boolean onOptionsItemSelected(MenuItem item) {
-    // Handle action bar item clicks here. The action bar will
-    // automatically handle clicks on the Home/Up button, so long
-    // as you specify a parent activity in AndroidManifest.xml.
-    //int id = item.getItemId();
-    //noinspection SimplifiableIfStatement
-    //if (id == R.id.action_settings) {
-    //    return true;
-    //}
-    //return super.onOptionsItemSelected(item);
-    //}
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        goalsTeamA = savedInstanceState.getInt(GOALS_SCORE_A);
+        goalsTeamB = savedInstanceState.getInt(GOALS_SCORE_B);
+        cornersTeamA = savedInstanceState.getInt(CORNERS_SCORE_A);
+        cornersTeamB = savedInstanceState.getInt(CORNERS_SCORE_B);
+        offsidesTeamA = savedInstanceState.getInt(OFFSIDES_SCORE_A);
+        offsidesTeamB = savedInstanceState.getInt(OFFSIDES_SCORE_B);
+    }
 
     /**
      * Increase the offsides for Team A by 1.
