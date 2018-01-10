@@ -21,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
     int cornersTeamB;
     int offsidesTeamA;
     int offsidesTeamB;
+    TextView textViewTeamAGoals;
+    TextView textViewTeamBGoals;
+    TextView textViewTeamACorners;
+    TextView textViewTeamBCorners;
+    TextView textViewTeamAOffsides;
+    TextView textViewTeamBOffsides;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +46,19 @@ public class MainActivity extends AppCompatActivity {
             offsidesTeamA = 0;
             offsidesTeamB = 0;
         }
+        textViewTeamAGoals = new TextView(this);
+        textViewTeamBGoals = new TextView(this);
+        textViewTeamACorners = new TextView(this);
+        textViewTeamBCorners = new TextView(this);
+        textViewTeamAOffsides = new TextView(this);
+        textViewTeamBOffsides = new TextView(this);
         setContentView(R.layout.activity_main);
+        textViewTeamAGoals = findViewById(R.id.team_a_goals);
+        textViewTeamBGoals = findViewById(R.id.team_b_goals);
+        textViewTeamACorners = findViewById(R.id.team_a_corners);
+        textViewTeamBCorners = findViewById(R.id.team_b_corners);
+        textViewTeamAOffsides = findViewById(R.id.team_a_offsides);
+        textViewTeamBOffsides = findViewById(R.id.team_b_offsides);
         displayGoalsForTeamA(goalsTeamA);
         displayGoalsForTeamB(goalsTeamB);
         displayCornersForTeamA(cornersTeamA);
@@ -58,16 +76,6 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt(OFFSIDES_SCORE_A, offsidesTeamA);
         savedInstanceState.putInt(OFFSIDES_SCORE_B, offsidesTeamB);
         super.onSaveInstanceState(savedInstanceState);
-    }
-
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        goalsTeamA = savedInstanceState.getInt(GOALS_SCORE_A);
-        goalsTeamB = savedInstanceState.getInt(GOALS_SCORE_B);
-        cornersTeamA = savedInstanceState.getInt(CORNERS_SCORE_A);
-        cornersTeamB = savedInstanceState.getInt(CORNERS_SCORE_B);
-        offsidesTeamA = savedInstanceState.getInt(OFFSIDES_SCORE_A);
-        offsidesTeamB = savedInstanceState.getInt(OFFSIDES_SCORE_B);
     }
 
     /**
@@ -98,24 +106,21 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given goals for Team A.
      */
     public void displayGoalsForTeamA(int score) {
-        TextView scoreView = findViewById(R.id.team_a_goals);
-        scoreView.setText(String.valueOf(score));
+        textViewTeamAGoals.setText(String.valueOf(score));
     }
 
     /**
      * Displays the given corners for Team A.
      */
     public void displayCornersForTeamA(int score) {
-        TextView scoreView = findViewById(R.id.team_a_corners);
-        scoreView.setText(String.valueOf(score));
+        textViewTeamACorners.setText(String.valueOf(score));
     }
 
     /**
      * Displays the given offsides for Team A.
      */
     public void displayOffsidesForTeamA(int score) {
-        TextView scoreView = findViewById(R.id.team_a_offsides);
-        scoreView.setText(String.valueOf(score));
+        textViewTeamAOffsides.setText(String.valueOf(score));
     }
 
     /**
@@ -146,24 +151,21 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given goals for Team B.
      */
     public void displayGoalsForTeamB(int score) {
-        TextView scoreView = findViewById(R.id.team_b_goals);
-        scoreView.setText(String.valueOf(score));
+        textViewTeamBGoals.setText(String.valueOf(score));
     }
 
     /**
      * Displays the given corners for Team B.
      */
     public void displayCornersForTeamB(int score) {
-        TextView scoreView = findViewById(R.id.team_b_corners);
-        scoreView.setText(String.valueOf(score));
+        textViewTeamBCorners.setText(String.valueOf(score));
     }
 
     /**
      * Displays the given offsides for Team B.
      */
     public void displayOffsidesForTeamB(int score) {
-        TextView scoreView = findViewById(R.id.team_b_offsides);
-        scoreView.setText(String.valueOf(score));
+        textViewTeamBOffsides.setText(String.valueOf(score));
     }
 
     /**
