@@ -53,11 +53,9 @@
                     android:textSize="@dimen/text_large" />
 
                 <Button
+                    style="@style/Margin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin_bottom_small"
-                    android:layout_marginLeft="@dimen/margin_side"
-                    android:layout_marginRight="@dimen/margin_side"
                     android:onClick="addGoalForTeamA"
                     android:text="@string/goal" />
 
@@ -73,11 +71,9 @@
                     android:textSize="@dimen/text_medium" />
 
                 <Button
+                    style="@style/Margin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin_bottom_small"
-                    android:layout_marginLeft="@dimen/margin_side"
-                    android:layout_marginRight="@dimen/margin_side"
                     android:onClick="addCornerForTeamA"
                     android:text="@string/corner" />
 
@@ -93,11 +89,9 @@
                     android:textSize="@dimen/text_medium" />
 
                 <Button
+                    style="@style/Margin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin_bottom_small"
-                    android:layout_marginLeft="@dimen/margin_side"
-                    android:layout_marginRight="@dimen/margin_side"
                     android:onClick="addOffsideForTeamA"
                     android:text="@string/offside" />
             </LinearLayout>
@@ -136,11 +130,9 @@
                     android:textSize="@dimen/text_large" />
 
                 <Button
+                    style="@style/Margin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin_bottom_small"
-                    android:layout_marginLeft="@dimen/margin_side"
-                    android:layout_marginRight="@dimen/margin_side"
                     android:onClick="addGoalForTeamB"
                     android:text="@string/goal" />
 
@@ -156,11 +148,9 @@
                     android:textSize="@dimen/text_medium" />
 
                 <Button
+                    style="@style/Margin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin_bottom_small"
-                    android:layout_marginLeft="@dimen/margin_side"
-                    android:layout_marginRight="@dimen/margin_side"
                     android:onClick="addCornerForTeamB"
                     android:text="@string/corner" />
 
@@ -176,11 +166,9 @@
                     android:textSize="@dimen/text_medium" />
 
                 <Button
+                    style="@style/Margin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin_bottom_small"
-                    android:layout_marginLeft="@dimen/margin_side"
-                    android:layout_marginRight="@dimen/margin_side"
                     android:onClick="addOffsideForTeamB"
                     android:text="@string/offside" />
             </LinearLayout>
