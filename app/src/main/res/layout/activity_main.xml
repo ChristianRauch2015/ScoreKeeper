@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -32,24 +31,16 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center_horizontal"
+                    style="@style/TextViewMedium"
                     android:padding="@dimen/margin_team"
                     android:text="@string/team_a"
-                    android:textColor="@color/colorGrey"
                     android:textSize="@dimen/text_small" />
 
                 <TextView
                     android:id="@+id/team_a_goals"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
+                    style="@style/TextViewLight"
                     android:paddingBottom="@dimen/margin_bottom_large"
                     android:text="@string/_0"
-                    android:textColor="@color/colorBlack"
                     android:textSize="@dimen/text_large" />
 
                 <Button
@@ -61,13 +52,9 @@
 
                 <TextView
                     android:id="@+id/team_a_corners"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
+                    style="@style/TextViewLight"
                     android:paddingBottom="@dimen/margin_bottom_small"
                     android:text="@string/_0"
-                    android:textColor="@color/colorBlack"
                     android:textSize="@dimen/text_medium" />
 
                 <Button
@@ -79,13 +66,9 @@
 
                 <TextView
                     android:id="@+id/team_a_offsides"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
+                    style="@style/TextViewLight"
                     android:paddingBottom="@dimen/margin_bottom_small"
                     android:text="@string/_0"
-                    android:textColor="@color/colorBlack"
                     android:textSize="@dimen/text_medium" />
 
                 <Button
@@ -109,24 +92,16 @@
                 tools:context="com.example.android.courtcounter.MainActivity">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center_horizontal"
+                    style="@style/TextViewMedium"
                     android:padding="@dimen/margin_team"
                     android:text="@string/team_b"
-                    android:textColor="@color/colorGrey"
                     android:textSize="@dimen/text_small" />
 
                 <TextView
                     android:id="@+id/team_b_goals"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
+                    style="@style/TextViewLight"
                     android:paddingBottom="@dimen/margin_bottom_large"
                     android:text="@string/_0"
-                    android:textColor="@color/colorBlack"
                     android:textSize="@dimen/text_large" />
 
                 <Button
@@ -138,13 +113,9 @@
 
                 <TextView
                     android:id="@+id/team_b_corners"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
+                    style="@style/TextViewLight"
                     android:paddingBottom="@dimen/margin_bottom_small"
                     android:text="@string/_0"
-                    android:textColor="@color/colorBlack"
                     android:textSize="@dimen/text_medium" />
 
                 <Button
@@ -156,13 +127,9 @@
 
                 <TextView
                     android:id="@+id/team_b_offsides"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
+                    style="@style/TextViewLight"
                     android:paddingBottom="@dimen/margin_bottom_small"
                     android:text="@string/_0"
-                    android:textColor="@color/colorBlack"
                     android:textSize="@dimen/text_medium" />
 
                 <Button

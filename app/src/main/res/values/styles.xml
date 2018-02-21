@@ -13,4 +13,21 @@
         <item name="android:layout_marginLeft">@dimen/margin_side</item>
         <item name="android:layout_marginRight">@dimen/margin_side</item>
     </style>
+
+    <style name="TextViewLight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="TextViewMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/colorGrey</item>
+    </style>
+
 </resources>

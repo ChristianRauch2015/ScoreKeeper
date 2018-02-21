@@ -2,19 +2,27 @@ package com.example.android.scorekeeper;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-//import android.view.MenuItem;
-import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    static final String GOALS_SCORE_A = "goalsTeamA";
-    static final String GOALS_SCORE_B = "goalsTeamB";
-    static final String CORNERS_SCORE_A = "cornersTeamA";
-    static final String CORNERS_SCORE_B = "cornersTeamB";
-    static final String OFFSIDES_SCORE_A = "offsidesTeamA";
-    static final String OFFSIDES_SCORE_B = "offsidesTeamB";
+    static final String GOALS_SCORE_A;
+    static final String GOALS_SCORE_B;
+    static final String CORNERS_SCORE_A;
+    static final String CORNERS_SCORE_B;
+    static final String OFFSIDES_SCORE_A;
+    static final String OFFSIDES_SCORE_B;
+
+    static {
+        GOALS_SCORE_A = "goalsTeamA";
+        GOALS_SCORE_B = "goalsTeamB";
+        CORNERS_SCORE_A = "cornersTeamA";
+        CORNERS_SCORE_B = "cornersTeamB";
+        OFFSIDES_SCORE_A = "offsidesTeamA";
+        OFFSIDES_SCORE_B = "offsidesTeamB";
+    }
+
     int goalsTeamA;
     int goalsTeamB;
     int cornersTeamA;
